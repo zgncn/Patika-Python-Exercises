@@ -1,0 +1,21 @@
+new_list = []
+def flat_lists(x):
+    for i in x:
+        if type(i) != list:
+            new_list.append(i)
+        else:
+            for j in i:
+                if type(j) != list:
+                    new_list.append(j)
+                else:
+                    for k in j:
+                        if type(k) != list:
+                            new_list.append(k)
+                        else:
+                            for l in k:
+                                if type(l) != list:
+                                    new_list.append(l)
+
+    return new_list
+
+print(flat_lists([[1,'a',['cat'],2],[[[3]],'dog'],4,5]))
